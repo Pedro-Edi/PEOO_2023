@@ -9,9 +9,9 @@ class Disciplina:
     self.notafinal = 0
 
   def cal_nota(self):
-    return ((self.nota1 * 2) + (self.nota2 * 2) + (self.nota3 *3) + (self.nota4 *3) )/ 10
-    if self.cal_nota() < 60:
-      return self.cal_nota() + self.notafinal / 2
+    return ((self.nota1 * 2) + (self.nota2 * 2) + (self.nota3 * 3) +(self.nota4 * 3)) / 10
+  def cal_recu(self):
+    return self.cal_nota() + self.notafinal / 2
 
 
 Materia = Disciplina()
@@ -23,4 +23,4 @@ Materia.nota4 = int(input())
 print(Materia.cal_nota())
 if Materia.cal_nota() < 60:
   Materia.notafinal = int(input())
-  print(Materia.cal_nota())
+  print(Materia.cal_recu())
