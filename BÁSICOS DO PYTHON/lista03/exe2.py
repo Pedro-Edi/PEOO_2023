@@ -1,0 +1,6 @@
+entrada_1 = input()
+entrada_2 = input()
+A = float(entrada_1)
+B = float(entrada_2)
+MEDIA = (A*3.5+B*7.5)/(11)
+print(f'MEDIA = {MEDIA:.5f}')
