@@ -1,0 +1,3 @@
+class Esporte:
+  def __init__(self,nome,horario,mensalidade):
+    self.__nome=nomes
