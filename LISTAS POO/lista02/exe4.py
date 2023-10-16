@@ -1,40 +1,47 @@
-class EntradaCinema:
-    def __init__(self, dia, horario):
-        self.__dia = dia
-        self.__horario = horario
+class Cinema:
+  def __init__(self):
+    self.__dia=None
+    self.__horario=0
+    self.__dias=['seg','ter','quar','quin','sex','sáb','dom']
+  def set_dia(self,d):
+    if d in self.__dias:
+      self.__dia=d
+    else:
+      raise ValueError()
+  def set_horario(self,h):
+    if 1<=h<=24:
+      self.__horario=h
+    else:
+      raise ValueError()
+      
+  def get_dia(self):
+    return self.__dia
+  def get_horario(self):
+    return self.__horario
     
-    def calcular_valor_entrada(self):
-        if self.__dia in ["segunda", "terça", "quinta"]:
-            valor_base = 16.00
-        elif self.__dia == "quarta":
-            valor_base = 8.00
-        else:  # sexta, sábado e domingo
-            valor_base = 20.00
-        
-        if self.__horario >= 17 and self.__horario <= 23:
-            valor_base *= 1.5
-        
-        return valor_base
-    
-    def get_dia(self):
-        return self.__dia
-    
-    def set_dia(self, dia):
-        self.__dia = dia
-    
-    def get_horario(self):
-        return self.__horario
-    
-    def set_horario(self, horario):
-        self.__horario = horario
+  def inteira(self):
+    total=0
+    if self.__dia=='seg' or self.__dia=='ter' or self.__dia=='quin':
+      total=16
+    elif self.__dia=='quar':
+      total=8
+    elif self.__dia=='sex' or self.__dia=='sáb' or self.__dia=='domin':
+      total=20
+    if 24>=self.__horario>=17 and self.__dia!='quar':
+      return (total/2)+(total)
+    else:
+      return total
+  def meia(self):
+    if self.__dia!='quar':
+      
+      return self.inteira()/2
+    else:
+      return self.inteira()
+      
+c=Cinema()
+dia=input('Dia: ')
+c.set_dia(dia)
 
-# Exemplo de uso da classe
-dia = input("Digite o dia da sessão (segunda, terça, quarta, quinta, sexta, sábado ou domingo): ")
-horario = int(input("Digite o horário da sessão (entre 0 e 23): "))
-entrada = EntradaCinema(dia, horario)
-print("Valor da Entrada:", entrada.calcular_valor_entrada())
-
-# Acessando e modificando os atributos da entrada usando os métodos de acesso
-novo_dia = input("Digite o novo dia da sessão: ")
-entrada.set_dia(novo_dia)
-print("Novo dia:", entrada.get_dia())
+horario=int(input('Hora: '))
+c.set_horario(horario)
+print(f'Inteira: {c.inteira()}\nMeia: {c.meia()}')

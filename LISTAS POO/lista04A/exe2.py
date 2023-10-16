@@ -42,7 +42,6 @@ class UI:
         artista = input("Banda: ")
         album = input("Álbum: ")
         duracao_txt = input("Duração (mm:ss): ")
-        #duracao = datetime.timedelta.strptime(duracao_txt, "%M:%S")
         min, sec = map(int, duracao_txt.split(":"))
         duracao = datetime.timedelta(minutes=min, seconds=sec)
         m = Musica(titulo, artista, album, duracao)

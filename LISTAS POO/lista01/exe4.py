@@ -1,26 +1,26 @@
-class EntradaCinema:
-    def __init__(self, dia, horario):
-        self.dia = dia
-        self.horario = horario
-    
-    def calcular_valor_entrada(self):
-        valor_base = 0
-        if self.dia in ["segunda", "terça", "quinta"]:
-            valor_base = 16
-        elif self.dia == "quarta":
-            valor_base = 8
-        else:  # sexta, sábado, domingo
-            valor_base = 20
-
-        if self.horario >= 17 and self.horario <= 24:
-            valor_base *= 1.5
-
-        return valor_base
-
-# Exemplo de uso da classe
-dia = input("Digite o dia da semana: ")
-horario = int(input("Digite o horário da sessão (em horas): "))
-
-entrada = EntradaCinema(dia, horario)
-valor_entrada = entrada.calcular_valor_entrada()
-print("Valor da entrada:", valor_entrada)
+class Cinema:
+  def __init__(self):
+    self.dia=dia
+    self.horario=horario
+  def inteira(self):
+    total=0
+    if self.dia=='segunda' or self.dia=='terça' or self.dia=='quinta':
+      total=16
+    elif self.dia=='quarta':
+      total=8
+    elif self.dia=='sexta' or self.dia=='sábado' or self.dia=='domingo':
+      total=20
+    if 24>=self.horario>=17 and self.dia!='quarta':
+      return (total/2)+(total)
+    else:
+      return total
+  def meia(self):
+    if self.dia!='quarta':
+      
+      return self.inteira()/2
+    else:
+      return self.inteira()
+dia=input('Dia: ')
+horario=int(input('Hora: '))
+c=Cinema(dia,horario)
+print(f'Inteira: {c.inteira()}\nMeia: {c.meia()}')

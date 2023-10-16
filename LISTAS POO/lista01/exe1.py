@@ -1,17 +1,15 @@
+
 import math
-
 class Circulo:
-    def __init__(self, raio):
-        self.raio = raio
+  def __init__(self,raio):
+    self.raio=raio
+  def circunferencia(self):
+    C=2*math.pi*self.raio
+    return f'A circunferencia é de {C:.1f} cm'
+  def area(self):
+    A=(math.pi)*(self.raio**2)
+    return f'A area do círculo é de {A:.1f} cm'
     
-    def calcular_area(self):
-        return math.pi * (self.raio ** 2)
-    
-    def calcular_circunferencia(self):
-        return 2 * math.pi * self.raio
-
-# Exemplo de uso da classe
-raio = float(input("Digite o raio do círculo: "))
-circulo = Circulo(raio)
-print("Área:", circulo.calcular_area())
-print("Circunferência:", circulo.calcular_circunferencia())
+C=Circulo(float(input('Raio é de : ')))
+print(C.circunferencia())
+print(C.area())

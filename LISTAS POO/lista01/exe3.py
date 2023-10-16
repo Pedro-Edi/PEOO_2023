@@ -1,16 +1,12 @@
 class Viagem:
-    def __init__(self, distancia, horas, minutos):
-        self.distancia = distancia
-        self.tempo_total = horas + minutos / 60
-    
-    def calcular_velocidade_media(self):
-        return self.distancia / self.tempo_total
-
-# Exemplo de uso da classe
-distancia = float(input("Digite a distância da viagem (em km): "))
-horas = int(input("Digite a quantidade de horas: "))
-minutos = int(input("Digite a quantidade de minutos: "))
-
-viagem = Viagem(distancia, horas, minutos)
-velocidade_media = viagem.calcular_velocidade_media()
-print("Velocidade Média:", velocidade_media, "km/h")
+  def __init__(self,distancia,tempogasto):
+    self.distancia=distancia
+    self.tempogasto=tempo_gasto
+  def velocidademedia(self):
+    velocidademedia=self.distancia/self.tempogasto
+    return f'{velocidademedia:.1f}'
+distancia=int(input('Distância em km: '))
+horas,minutos=map(int,input('Digite o tempo (hh:mm): ').split(':'))
+tempo_gasto=horas+(minutos/60)
+v=Viagem(distancia,tempo_gasto)
+print(f'A viagem teve um velocidade média de {v.velocidademedia()} km/h')

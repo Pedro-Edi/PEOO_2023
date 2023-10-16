@@ -16,11 +16,13 @@ class Boleto:
     
   def situacao(self):
     if self.__valorPago==0:
-      return f'{Pagamento(1).name} - Data: {self.__datapago.strftime("%d/%m/%Y")}'
+      return f'{Pagamento(1).name} - Data: {self.__datapago.strftime("%d/%m/%Y %H:%m")}'
     if self.__valorPago<self.valorBoleto():
-      return f'{Pagamento(2).name} - Data: {self.__datapago.strftime("%d/%m/%Y")}'
+      return f'{Pagamento(2).name} - Data: {self.__datapago.strftime("%d/%m/%Y %H:%m")}'
     if self.__valorPago==self.valorBoleto():
-      return f'{Pagamento(2).name} - Data: {self.__datapago.strftime("%d/%m/%Y")}'
+      return f'{Pagamento(2).name} - Data: {self.__datapago.strftime("%d/%m/%Y %H:%m")}'
+    if self.__valorPago==self.valorBoleto():
+      return f'{Pagamento(2).name} - Data: {self.__datapago.strftime("%d/%m/%Y %H:%m")}'
       
   def __str__(self):
     return f'O codigo do boleto:{self.__cod}\nData de Emissão: {self.__emissao.strftime("%d/%m/%Y")}\nVencimento: {self.__venc.strftime("%d/%m/%Y")}\nValor Boleto: {self.__valorBoleto}'
@@ -32,7 +34,7 @@ class Pagamento(enum.Enum):
     Pago=3
 class UI:
   def main():
-    cod=input('Qual o cod: ')
+    cod=int(input('Qual o cod: '))
     emissao=input('Data de emissão(dia/mes/ano): ')
     vencimento=input('Data de vencimento(dia/mes/ano): ')
     valorBoleto=float(input('Qual o valor do Boleto: '))

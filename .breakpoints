@@ -1,3 +1,62 @@
 {
-  "files": {}
+  "files": {
+    "crud.py": [
+      {
+        "id": "bcd44db8-19b7-406c-8c29-f791e4c42d58",
+        "line": 1,
+        "version": 4726,
+        "index": 0
+      }
+    ],
+    "lista02/exe2.py": [
+      {
+        "id": "a3794c17-2f1a-442b-8077-e270f5e8487f",
+        "line": 42,
+        "version": 1646,
+        "index": 1154
+      },
+      {
+        "id": "48eb909b-0488-4fe9-b503-a1739fc416ff",
+        "line": 42,
+        "version": 1646,
+        "index": 1132
+      }
+    ],
+    "lista04A/exe1.py": [
+      {
+        "id": "abf295d6-e055-48fa-9650-faea267e98e4",
+        "line": 5,
+        "version": 2519,
+        "index": 29
+      }
+    ],
+    "lista07-Crud(rev)/cliente.py": [
+      {
+        "id": "706aba30-b46a-4266-bccb-d8c3d73f69b7",
+        "line": 101,
+        "version": 5527,
+        "index": 1937
+      }
+    ],
+    "lista07-Dicionario/exe1.py": [
+      {
+        "id": "36d4ab03-8414-4bf1-aaf3-2df9fe79f547",
+        "line": 292,
+        "version": 5221,
+        "index": 6980
+      },
+      {
+        "id": "0733335b-c912-4513-b742-7ded9c66ebcf",
+        "line": 304,
+        "version": 5221,
+        "index": 7384
+      },
+      {
+        "id": "af170cc1-7e3e-4af6-853d-0aba96fa8be0",
+        "line": 398,
+        "version": 5221,
+        "index": 10169
+      }
+    ]
+  }
 }
